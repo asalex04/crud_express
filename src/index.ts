@@ -1,13 +1,11 @@
 import express from 'express'
-import 'dotenv/config'
 import router from "./routers";
 
-const PORT = process.env.PORT || 5000
-
+const PORT = process.env.PORT || 4000
+console.log(process.env.PORT)
 const app = express()
 app.use(express.json())
 app.use('/api', router)
-
 
 const startApp = () => {
 
