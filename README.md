@@ -2,16 +2,22 @@
 
 This repository is created as an educational project
 
-### Install
-```
-$ npm install 
-```
+db.books.insertMany([  
+{  
+title: "title_1",
+description: "description_1",
+authors: "authors_1"  
+},  
+{  
+title: "title_2",
+description: "description_2",
+authors: "authors_2"  
+}  
+])
 
-### Start dev
-```
-$ npm run dev
-```
-### Start app
-```
-$ npm start 
-```
+db.books.find( { title: "title_2" } )
+
+db.books.updateOne(
+{ _id: 2 },
+{ $set: { description: "description_3", authors: "authors_3" } }
+)
